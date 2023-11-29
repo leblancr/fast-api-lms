@@ -33,4 +33,3 @@ async def delete_courses_api():
 @router.get("/courses/{id}/sections")
 async def read_course_sections(id: int):
     return {"courses": []}
-{id}
