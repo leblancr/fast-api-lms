@@ -12,7 +12,7 @@ postgresql://rich:reddpos@localhost/fastapi_lms?options=-csearch_path%3Dalembic_
 poetry add alembic
 alembic init alembic - creates alembic directory
 alembic revision --autogenerate - to generate versions/<migration_file>.py
-alembic upgrade head - to do migration, runs the generated file above
+alembic upgrade head - to do the migration, runs the generated file above
 
 ERROR [alembic.util.messaging] Can't locate revision identified by 'e11a3532ec28'
 FAILED: Can't locate revision identified by 'e11a3532ec28':

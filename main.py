@@ -1,8 +1,20 @@
+import logging
+
 from fastapi import FastAPI
 
 from api import users, courses, sections
 from db.db_setup import engine
 from db.models import user, course
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(levelname)s - %(message)s'
+                    )
+
+logging.debug('Debug')
+logging.info('info')
+logging.warning('warning')
+logging.error('error')
+logging.critical('critical')
 
 # create all the tables associated with the declarative models defined in the
 # user and course modules and bind them to the specified database engine

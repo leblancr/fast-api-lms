@@ -23,7 +23,7 @@ class Course(Timestamp, Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String(200), nullable=False)
     description = Column(Text, nullable=True)
-    user_id = Column(Integer, ForeignKey("public.users.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
     created_by = relationship(User)
     sections = relationship("Section", back_populates="course", uselist=False)
@@ -67,7 +67,7 @@ class StudentCourse(Timestamp, Base):
     __table_args__ = {'schema': 'public'}
 
     id = Column(Integer, primary_key=True, index=True)
-    student_id = Column(Integer, ForeignKey("public.users.id"), nullable=False)
+    student_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     course_id = Column(Integer, ForeignKey("public.courses.id"), nullable=False)
     completed = Column(Boolean, default=False)
 
@@ -83,7 +83,7 @@ class CompletedContentBlock(Timestamp, Base):
     __table_args__ = {'schema': 'public'}
 
     id = Column(Integer, primary_key=True, index=True)
-    student_id = Column(Integer, ForeignKey("public.users.id"), nullable=False)
+    student_id = Column(Integer, ForeignKey("users.id"), nullable=False)
     content_block_id = Column(Integer, ForeignKey("public.content_blocks.id"), nullable=False)
     url = Column(URLType, nullable=True)
     feedback = Column(Text, nullable=True)
