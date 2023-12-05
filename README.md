@@ -1,5 +1,6 @@
 # fast-api-lms
 https://www.youtube.com/watch?v=gQTRsZpR7Gw
+Fast API Crash Course Code-along | Build an app with Postgres, SQL Alchemy, Async, and more
 
 python -m venv venv
 source venv/bin/activate
