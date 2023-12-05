@@ -24,3 +24,5 @@ could not find table 'content_blocks' with which to generate a foreign key to ta
 
 Needed to add schema name (public in this case) in foreign key:
 user_id = Column(Integer, ForeignKey("public.users.id"), nullable=False) in models classes.
+
+chnged gitlab to github in pre-commit-config.yaml
